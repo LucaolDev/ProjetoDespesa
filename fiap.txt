@@ -24,7 +24,13 @@ INSERT INTO java_categoria VALUES(3, 'DIVERSAO');
 COMMIT;
 
 
-INSERT INTO java_despesa VALUES (1, 'supermercado', 150, TO_DATE('08-11-2025', 'DD,MM,YYYY'), 1);
+INSERT INTO java_despesa VALUES (100, 'compra no Extra', 250, TO_DATE('01/08/2025', 'DD,MM,YYYY'), 0);
+INSERT INTO java_despesa VALUES (101, 'mensalidade da fiap', 2200, TO_DATE('05/08/2025', 'DD,MM,YYYY'), 1);
+INSERT INTO java_despesa VALUES (102, 'aluguel do apartamento', 2000, TO_DATE('10/08/2025', 'DD,MM,YYYY'), 2);
+INSERT INTO java_despesa VALUES (103, 'balada na fiap', 1000, TO_DATE('10/08/2025', 'DD,MM,YYYY'), 3);
+COMMIT;
+
+
 
 SELECT * FROM java_categoria;
 SELECT * FROM java_despesa;
