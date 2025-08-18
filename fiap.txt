@@ -1,4 +1,6 @@
 DROP TABLE java_categoria;
+DROP TABLE java_despesa;
+
 
 CREATE TABLE java_categoria (
     id_categoria NUMBER,
@@ -15,9 +17,12 @@ CREATE TABLE java_despesa (
     PRIMARY KEY (id_despesa),
     FOREIGN KEY (id_categoria) REFERENCES java_categoria(id_categoria) on delete cascade
 );
+INSERT INTO java_categoria VALUES(0, 'MORADIA');
+INSERT INTO java_categoria VALUES(1, 'EDUCACAO');
+INSERT INTO java_categoria VALUES(2, 'ALIMENTACAO');
+INSERT INTO java_categoria VALUES(3, 'DIVERSAO');
+COMMIT;
 
-INSERT INTO java_categoria VALUES(1, 'moradia');
-INSERT INTO java_categoria VALUES(2, 'transplante');
 
 INSERT INTO java_despesa VALUES (1, 'supermercado', 150, TO_DATE('08-11-2025', 'DD,MM,YYYY'), 1);
 
