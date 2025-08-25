@@ -30,7 +30,14 @@ INSERT INTO java_despesa VALUES (102, 'aluguel do apartamento', 2000, TO_DATE('1
 INSERT INTO java_despesa VALUES (103, 'balada na fiap', 1000, TO_DATE('10/08/2025', 'DD,MM,YYYY'), 3);
 COMMIT;
 
+UPDATE java_categoria set categoria = 'xyz' where id_categoria = 1;
+DELETE from java_categoria where id_categoria = 1;
+DELETE from java_despesa;
 
+ROLLBACK;
+COMMIT;
 
 SELECT * FROM java_categoria;
 SELECT * FROM java_despesa;
+
+CREATE SEQUENCE seqd START WITH 150 INCREMENT by 1;

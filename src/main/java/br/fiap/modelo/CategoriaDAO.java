@@ -24,7 +24,7 @@ public class CategoriaDAO {
             ps.execute();
         }
         catch (SQLException e){
-            System.out.println("Erro ao inserir no banco\n" + e);
+            System.out.println("Erro ao inserir despesa\n" + e);
         }
     }
 
